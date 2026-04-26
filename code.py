@@ -1,21 +1,9 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-import random
 
-data = {
-    "ID": [101, 102, 103, 104, 105],
-    "Prix": [15.0, 25.0, 10.0, 30.0, 12.0],
-    "Quantité": [3, 2, 5, 4, 6],
-    "Remise": [10, 5, 0, 15, 8]
-}
-df = pd.DataFrame(data)
-df.to_csv("ventes.csv", index=False)
 
 # 1 Lecture du csv
 df = pd.read_csv("./ventes.csv")
-                                            
-
-
 
 # 2 Calcul du Chiffre d’Affaires Brut
 df["CA_Brut"] = df["Prix"] * df["Quantite"]
